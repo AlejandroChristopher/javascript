@@ -1,0 +1,64 @@
+Anotações de JavaScript
+
+var é o que usamos para definir uma variável
+
+var n1 (n1 é o nome que dei para minha variável)
+
+var n1 = (este "=" significa recebe, ou seja, uso ele para dar o valor da minha variável)
+
+window.prompt (Aparece uma caixa de alerta assim que abre o site para o usuário digitar)
+
+Escrevo oque quero que apareça para o usuário usando o ('')
+
+Exemplo
+
+var n1 = window.prompt('Digite um número')
+
+ou seja, a variavel n1 recebe o valor digitado pelo usuário
+
+${} é usado para mostrar o valor das variáveis para o usuário
+
+exemplo
+
+var nome = window.prompt('Qual seu nome?')
+
+Usuário digita o nome por exemplo Alejandro, e para que 
+apareça o nome dele para ele mesmo como uma mensagem de 
+boas vindas, devemos fazer o seguinte:
+
+window.alert(`Olá, &{nome}, Seja bem vindo ao meu site`)
+
+s.length // quantos caracteres a string tem
+s.toUpperCase() // Torna todas as ltras maisculas
+s.toLowercase() // Torna tudo minusculo
+
+document.write é usado para escrever no corpo do site
+
+document.write(`Olá, ${nome}, seu nome tem ${nome.length} letras!`)
+
+lembrando que nesse caso com o ${} temos que usar a crase `` não o ''
+
+para formatarmos numeros usamos o toFixed()
+
+por exemplo, dou a uma variavel o valor de 150.5 mas quero que apareça
+com duas casas decimais após a vrigula, então farei o seguinte comando:
+
+var n1 = 150.5
+
+window.alert(`Você gastou ${n1.toFixed(2)} no Shopping!`)
+
+coloquei entre parenteses o valor de 2 porque é a quantidade de casas
+decimais que quero que apareça após a virgula.
+
+e para que invés de "." apreça "," oque eu faço? Porque por padrão,
+no brasil é comum usarmos a "," mas no U.S é usado o "." então faremos:
+
+window.alert(`Você gastou &{n1.tofixed(2).replace('.',',')}`)
+
+para indicar qual o tipo do dinheiro (dolar, euro, real...) usamos o 
+seguinte código:
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+
+
