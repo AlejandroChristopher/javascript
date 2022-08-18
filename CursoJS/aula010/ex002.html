@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        input{
+            height: 45px;
+            width: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            text-align: center;
+            border-radius: 7px;
+            border: 1px solid #777777;
+
+        }
+        div{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            font-size: 1.3em;
+            border: 1px solid #777777;
+            width: 323px;
+            height: 45px;
+            border-radius: 7px;
+           
+        }
+        
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            font-size: 3em;
+
+        }
+        #so{
+            height: 50px;
+            font-weight: bolder;
+            color: white;
+            background-color: green;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input id="so" type="button" value="Somar" onclick="somar()">
+    <div id="res"><p></p></div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual <strong>${s}</strong>`
+            
+        }
+        var so = window.document.getElementById('so')
+        so.addEventListener('mouseenter', entrar)
+        so.addEventListener('mouseout', sair)
+
+        function entrar() {
+            so.style.background = 'darkgreen'
+            so.style.fontSize = '1.4em'
+        }
+        function sair() {
+            so.style.background = 'green'
+            so.style.fontSize = '1.3em'
+        }
+    </script>
+
+</body>
+</html>
