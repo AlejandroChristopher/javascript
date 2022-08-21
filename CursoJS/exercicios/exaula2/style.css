@@ -1,0 +1,85 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0;
+    font-family: arial;
+
+}
+body{
+    background-image: url(imagens/pexels-jonathan-petersson-1237119.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#container{
+    position: relative;
+}
+#conteudo{
+    position: absolute;
+    left: 50%; 
+    top: 50%;  
+    border-radius: 10px;
+    transform: translate(-50%, 30%);
+    box-shadow: 0px 10px 15px 0px rgb(0 0 0 / 46%);
+    
+    
+}
+
+header{
+    color: #ffffffcc;
+    text-align: center;
+    padding: 21px;
+}
+#saudacao{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bolder;
+    background-color: #ffa500;
+    width: 500px;
+    padding: 7px 0px 7px 0px;
+    border-radius: 7px 7px 0px 0px;
+}
+section{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+
+}
+#hora{
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 14px;
+}
+img{
+    height: 200px;
+}
+#imagem{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+
+    transform: translate(-50%, -50%);
+}
+footer{
+    position: absolute;
+    background-color: #ffa500;
+    text-align: center;
+    width: 500px;
+    padding: 7px 0px ;
+    color: white;
+
+    left: 50%;
+    top: 97%;
+
+    transform: translate(-50%, -50%);
+    border-radius: 0px 0px 7px 7px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover{
+    color: rgb(241, 241, 241);
+    font-size: 1.1em;
+}

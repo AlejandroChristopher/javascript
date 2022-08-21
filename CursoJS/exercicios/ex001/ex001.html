@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Dia</title>
+</head>
+<body onload="carregar()">
+    
+    <div id="container">
+        <div id="conteudo">
+            <header id="saudacao"></header>
+            <section>
+                <div id="hora"></div>
+                <div id="foto">
+                    <img id="imagem" src="imagens/bomdia.png" alt="">
+                    
+                </div>
+            </section>
+            <footer>
+                <p>Criado po <a href="https://github.com/AlejandroChristopher" target="_blank">Alejandro Barros</a></p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script>
+        function carregar(){
+            var agora = document.getElementById('hora')
+            var hora = new Date()
+            var hora = hora.getHours()
+            var minutos = new Date()
+            var minutos = minutos.getMinutes()
+            var img = document.getElementById('foto')
+            var saudacao = document.getElementById('saudacao')
+
+            agora.innerHTML = `Agora são ${hora} horas e ${minutos} minutos`
+
+            if(hora >= 5 && hora < 12){
+                saudacao.innerHTML = 'Bom dia!'
+                img.scr = 'imagens/boatarde400x266.png'
+            }else if(hora >= 12 && hora < 18){
+                saudacao.innerHTML = 'Boa tarde!'
+            }else{
+                saudacao.innerHTML = 'Boa noite!'
+            }
+        }
+        
+    
+        
+
+    </script>
+</body>
+</html>

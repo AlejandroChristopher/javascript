@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+
+    <h1>Nacionalidade</h1>
+    <input type="text" name="nome" value="" placeholder="Seu nome..." /> <br>
+    <input type="text" name="pais" value="" placeholder="País que nasceu..." id="pais"> <br>
+    <input type="text" name="pai" placeholder="O pai é brasileiro nato?"id="pai"> <br>
+    <input type="text" name="mae" placeholder="A mãe é brasileira nata?"id="mae"> <br>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado">Resultado</div>
+    <script>
+        var nome = window.document.getElementById('nome')
+        var pais = window.document.getElementById('pais')
+        var pai = window.document.getElementeById('pai')
+        var mae = window.document.getElementById('mae')
+        
+        function calcular() {
+            var n = String(nome.value)
+            var p = String(pais.value)
+            var resultado = window.document.getElementById('resultado')
+            
+            if (p == 'Brasil') {
+                resultado.innerHTML = `<p>Olá ${n} você é brasileiro nato</p>`
+            }else{
+                resultado.innerText = 'Você não é brasileiro nato'
+
+            }
+        }
+
+    </script>

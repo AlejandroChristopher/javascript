@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro passos com DOM</title>
+    <title>Document</title>
     <style>
         body{
-            background-color: rgb(59, 59, 59);
+            background-color: blue;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.7em;
         }
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos DOS</h1>
-    <p>aqui vai o resultado</p>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
     <div id="msg">Clique em mim</div>
-    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <script>
-        window.document.write('Olá, DEUS')
-        /*var d = window.document.getElementById('msg')
-        d.style.background = 'green'*/
+    <script> //Onde escrevo meu código JavaScript
+        //var é minha variavel, ela tem o nome de p1, a qual recebe "=" 
+        //o valor atribuido a tag p do meu código HTML
+        //"window." é a raiz de todo meu código
+        //"document." é onde está tudo que estou escrevendo no meu código
+        //em document posso acessar meu head, style, body...
+        //"getElementsByTagName" Traduzido do ingle dá para entender:
+        //pegar elementos por tag name que é os nomes das <> 
+        //Dentro dos "()" vou atribuir qual a tag que quero pegar para...
+        //atribuir à minha variavel "p1"
+        //e em "[]" irei indicar qual das minhas tags é para pegar
+        //pois como "Elements" está no plural, ele irá pegar todas as tags "p"
+        //O "0" é minha primeira tag
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var m = window.document.getElementById('msg')
+        m.style.background = 'green'
+        m.innerText = 'olá!'
 
-        var d = window.document.querySelector('div#msg')
-        d.style.coloe = 'blue'
-
-    </script>
+    </script><!--Onde encerro meu código JavaScript-->
 
 </body>
 </html>
